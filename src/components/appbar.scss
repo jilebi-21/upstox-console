@@ -1,0 +1,122 @@
+@import '../variables';
+
+.appbar-main-container {
+	position: fixed;
+	height: $app-bar-height;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 5px 0.5px #0002;
+	z-index: 100;
+	background-color: white;
+}
+
+.safe-view-content-style {
+	padding-top: $app-bar-height;
+}
+
+.appbar-content {
+	padding: 0 24px;
+	width: auto;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+	align-items: center;
+	justify-content: space-between;
+
+	.nav-icon {
+		width: 32px;
+		height: 32px;
+		padding: 7px;
+		margin: 7px 5px;
+		color: #c1c1c1;
+		border-radius: 20%;
+		transition: 200ms;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #0001;
+		}
+	}
+
+	.menu-items-list {
+		list-style: none;
+		display: flex;
+		font-size: 13.5px;
+		font-weight: 500;
+		margin-left: 20px;
+
+		li {
+			height: $app-bar-height - 2px;
+			margin: 0 10px;
+			padding: 0 12px;
+			align-items: center;
+			display: flex;
+			cursor: pointer;
+			transition: 250ms;
+			border-bottom: 2px solid transparent;
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			&.active {
+				border-bottom-color: $primary-color;
+				color: $primary-color;
+			}
+		}
+	}
+
+	.page-label {
+		position: absolute;
+		left: 50%;
+		translate: -50%;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.mobile-view-wrapper {
+		width: 100%;
+		height: 0;
+		background-color: black;
+		position: fixed;
+		z-index: 2;
+		top: -100%;
+		right: 0;
+		opacity: 0;
+		transition: 300ms;
+		margin: auto;
+
+		.header {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.mobile-view-list {
+			height: 100%;
+			flex-shrink: 0;
+			overflow-x: hidden;
+			padding: 10px 24px;
+			color: #cccccc;
+			position: relative;
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 20px auto;
+
+				li {
+					padding: 10px 20px;
+					cursor: pointer;
+					transition: 350ms;
+					margin: 10px 0;
+					border-radius: 5px;
+					font-size: large;
+
+					&:hover {
+						background-color: #fff2;
+					}
+				}
+			}
+		}
+	}
+}
