@@ -18,14 +18,16 @@ function App() {
 					<AppBar />
 				</div>
 			)}
-			<div className="safe-view-content-style">
-				<Routes>
-					<Route path="/" element={<Navigate to="/dashboard" replace />} />
-					<Route path="/dashboard" element={<DashboardPage />} />
-					<Route path="/portfolio" element={<PortfolioPage />} />
-					<Route path="/profile" element={<ProfilePage />} />
-					<Route path="*" element={<NotFoundPage />} />
-				</Routes>
+			<div style={{ display: 'flex', justifyContent: 'center' }}>
+				<div className="safe-view-content-style">
+					<Routes>
+						<Route path="/" element={<Navigate to="/dashboard" replace />} />
+						<Route path="/dashboard" element={<DashboardPage />} />
+						<Route path="/portfolio" element={<PortfolioPage />} />
+						<Route path="/profile" element={<ProfilePage />} />
+						<Route path="*" element={<NotFoundPage />} />
+					</Routes>
+				</div>
 			</div>
 		</>
 	)

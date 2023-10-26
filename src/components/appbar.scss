@@ -11,7 +11,14 @@
 }
 
 .safe-view-content-style {
+	max-width: 1200px;
+	padding: 0 50px;
 	padding-top: $app-bar-height;
+	width: auto;
+	flex: 1;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .appbar-content {
