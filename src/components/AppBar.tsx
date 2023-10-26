@@ -1,8 +1,9 @@
 import './appbar.scss'
 import { List, X } from 'phosphor-react'
 import { useMediaQuery } from 'react-responsive'
-import AppLogo from './AppLogo'
 import { useLocation, useNavigate } from 'react-router-dom'
+import logoFull from '../assets/logo-full.svg'
+import logoMini from '../assets/logo-mini.svg'
 
 const AppBar = () => {
 	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
@@ -32,7 +33,7 @@ const AppBar = () => {
 	return (
 		<div className="appbar-main-container">
 			<div className="appbar-content">
-				<AppLogo size={40} full={!isTabletOrMobile} className="nav-item" />
+				<img src={isTabletOrMobile ? logoMini : logoFull} style={{ width: isTabletOrMobile ? 25 : 90 }} />
 
 				<div>
 					{isTabletOrMobile && (
