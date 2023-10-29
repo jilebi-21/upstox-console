@@ -7,3 +7,14 @@ export type ProfileType = {
 	userType: string
 	isActive: boolean
 }
+
+export type HoldingsType = {
+	isin: string
+	companyName: string
+	tradingSymbol: string
+	averagePrice: number
+	lastPrice: number
+	quantity: number
+	pnl: number
+	industry: string
+}

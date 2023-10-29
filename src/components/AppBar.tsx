@@ -26,7 +26,7 @@ const AppBar = () => {
 
 	const menuItems = [
 		{ name: 'Dashboard', url: '/dashboard' },
-		{ name: 'Portfolio', url: '/portfolio' },
+		{ name: 'Holdings', url: '/holdings' },
 		{ name: 'Profile', url: '/profile' },
 	]
 
